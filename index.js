@@ -53,8 +53,10 @@ app.post('/login', async (req, res) => {
 
             res.cookie('token', token, {
                 httpOnly: true, // Prevent client-side access to the token
-                secure: false, // Set to false for local development (HTTPS is not typically used)
-                sameSite: 'lax', // 'lax' is usually sufficient for local development
+                // secure: false, // Set to false for local development (HTTPS is not typically used)
+                secure :true,
+                // sameSite: 'lax', // 'lax' is usually sufficient for local development
+                sameSite : 'None',
                 path: '/', // Cookie should be available across the entire site
                 // maxAge: 3600000, // Cookie expiration (1 hour in milliseconds)
             });
