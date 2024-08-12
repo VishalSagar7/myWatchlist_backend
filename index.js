@@ -217,7 +217,7 @@ app.post('/removefromwatchlist', async (req, res) => {
 
 
 // Connect to MongoDB
-const uri = process.env.MONGOOSE_URI
+const uri = process.env.MONGOOSE_URI || 3001;
 
 mongoose.connect(uri)
   .then(() => {
