@@ -14,7 +14,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: 'http://localhost:5173', // Adjust the frontend origin as needed
+    origin: ['http://localhost:5173','https://frolicking-liger-91d98e.netlify.app'] ,// Adjust the frontend origin as needed
     credentials: true, // Allow credentials
 }));
 
