@@ -22,6 +22,12 @@ app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser());
 
 // Login route
+
+app.get('/', (req, res) => {
+    res.end('<h1>hello server</h1>')
+});
+
+
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
